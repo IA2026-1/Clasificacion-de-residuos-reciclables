@@ -1,63 +1,178 @@
 <img width="2048" height="768" alt="ChatGPT Image 25 may 2026, 03_29_28 p m" src="https://github.com/user-attachments/assets/07d32f1b-5098-4597-acc8-4e98968f6f48" />
+# ♻️ Modelo de Visión Artificial para la Clasificación de Residuos
 
 
-MODELO DE VISIÓN ARTIFICIAL PARA LA CLASIFICACIÓN DE RESIDUOS
-Autores: 
-Juan Manuel Rivera Torres
-Edwin David Gutierrez Olarte
-Juan Pablo Ballesteros Macias 
+---
 
-Institución: Universidad Industrial de Santander Curso: Inteligencia Artificial I
+# Autores
 
-Objetivo: Implementar un sistema de visión artificial capaz de identificar y clasificar automáticamente diversos tipos de residuos sólidos para optimizar los procesos de reciclaje y gestión ambiental.
+- Juan Manuel Rivera Torres  
+- Edwin David Gutierrez Olarte  
+- Juan Pablo Ballesteros Macias  
 
+---
 
-Descripción del Dataset
-El dataset utilizado consta de 7,010 imágenes de alta resolución organizadas en 5 categorías fundamentales para el reciclaje
+# Universidad
 
--Cardboard (Cartón): Empaques y cajas.
--Glass (Vidrio): Botellas y recipientes transparentes/oscuros.
--Metal (Metal): Latas y residuos ferrosos.
--Paper (Papel): Hojas impresas y revistas.
--Plastic (Plástico): Envases PET y polímeros comunes.
--Link de descarga: https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2 
+**Universidad Industrial de Santander (UIS)**  
+**Curso:** Inteligencia Artificial I
 
-Metodología y Pipeline de Desarrollo
-El proyecto se dividió en fases críticas para cumplir con los estándares de investigación en IA:
-A. Preparación y Exploración (EDA)
-Se realizaron transformaciones avanzadas incluyendo Resize (128x128), normalización basada en ImageNet y codificación de etiquetas mediante LabelEncoder
--La exploración visual mediante mosaicos confirmó la variabilidad intra-clase del dataset.
+---
 
-B. Selección de Características y Reducción de Dimensionalidad
-Selección Formal: Se aplicaron métodos de Feature Selection (SelectKBest) para identificar las variables más influyentes del vector de ResNet50, optimizando el tiempo de cómputo
+# 📌 Descripción del Proyecto
 
-Análisis Espacial: Se implementó PCA (reduciendo a 50 y 2 componentes) y t-SNE para visualizar la separabilidad de las clases. Los gráficos de t-SNE revelaron agrupaciones naturales claras para 'Metal' y 'Glass', y solapamientos menores entre 'Paper' y 'Cardboard'.
+Este proyecto desarrolla un sistema de visión artificial basado en técnicas de Machine Learning y Deep Learning capaz de identificar y clasificar automáticamente diferentes tipos de residuos reciclables.
 
-C. Exploración No Supervisada (Clustering)
-Para validar la estructura natural de los datos, se implementaron:
--K-Means: Determinado mediante el Método del Codo (Elbow Method) para encontrar el K óptimo
--DBSCAN: Utilizado para identificar muestras anómalas (noise) en el dataset
--Clustering Jerárquico: Representación mediante dendrogramas para entender la jerarquía acústica de los materiales
+El propósito principal es optimizar los procesos de reciclaje mediante automatización inteligente, reduciendo errores humanos y facilitando la separación eficiente de materiales.
 
-4. Análisis de Viabilidad y Conclusiones
--Viabilidad Técnica: El sistema es altamente robusto, manteniendo un F1-Score superior a 0.90 en la mayoría de las clases, lo que permite su despliegue en entornos controlados de clasificación
+---
 
--Viabilidad Comercial: La automatización de este proceso reduce costos operativos en plantas de reciclaje y minimiza la tasa de error humana en la segregación de materiales
+#  Objetivo General
 
--Trabajo Futuro: Implementación de modelos de detección de objetos en tiempo real (YOLO) para procesar múltiples residuos en una sola captura.
+Implementar un modelo de visión artificial capaz de reconocer y clasificar residuos sólidos reciclables para mejorar los procesos de gestión ambiental y reciclaje automatizado.
 
+---
 
-Modelos (Palabras Clave)
-ResNet50, SVM, Random Forest, Decision Tree, Gaussian NB, MLP, PCA, t-SNE, SelectKBest, K-Means, DBSCAN, GridSearchCV
+# 🗂️ Dataset Utilizado
 
+El dataset utilizado contiene aproximadamente **7,010 imágenes** distribuidas en cinco categorías principales de residuos reciclables.
 
-Enlaces del Proyecto
-Código (Notebook): [ENLACE A COLAB/GITHUB]
-Video de Sustentación: [ENLACE A YOUTUBE]
-Repositorio Oficial: [ENLACE A ESTE GITHUB]
-Para validar la estructura natural de los datos, se implementaron:
-K-Means: Determinado mediante el Método del Codo (Elbow Method) para encontrar el K óptimo
-.
-DBSCAN: Utilizado para identificar muestras anómalas (noise) en el dataset
-.
-Clustering Jerárquico: Representación mediante dendrogramas para entender la jerarquía acústica de los materiales
+## 📦 Categorías
+
+| Categoría | Descripción |
+|---|---|
+| Cardboard | Cartón, cajas y empaques |
+| Glass | Botellas y recipientes de vidrio |
+| Metal | Latas y residuos metálicos |
+| Paper | Hojas, revistas y papel |
+| Plastic | Envases PET y plásticos comunes |
+
+## 🔗 Dataset
+https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2
+
+---
+
+# ⚙️ Metodología y Pipeline de Desarrollo
+
+El proyecto se desarrolló en varias fases fundamentales para garantizar un análisis robusto y resultados confiables.
+
+---
+
+#  1. Preparación y Exploración de Datos (EDA)
+
+Durante esta etapa se realizaron procesos de:
+
+- Redimensionamiento de imágenes a **128x128 píxeles**
+- Normalización basada en ImageNet
+- Codificación de etiquetas mediante LabelEncoder
+- Exploración visual mediante mosaicos de imágenes
+
+Estas técnicas permitieron mejorar la calidad del dataset y analizar la variabilidad entre clases.
+
+---
+
+# 2. Extracción de Características y Reducción de Dimensionalidad
+
+##  Extracción de Características
+
+Se utilizó **ResNet50** como extractor de características profundas para obtener representaciones robustas de las imágenes.
+
+##  Selección de Características
+
+Se implementó:
+
+- SelectKBest
+
+Con el objetivo de identificar las características más relevantes y reducir el costo computacional.
+
+##  Reducción de Dimensionalidad
+
+Se aplicaron técnicas como:
+
+- PCA
+- t-SNE
+
+Estas técnicas permitieron visualizar la distribución espacial de las clases y analizar su separabilidad.
+
+###  Observaciones
+
+- Las clases **Metal** y **Glass** mostraron agrupaciones claramente definidas.
+- Se observó cierto solapamiento entre **Paper** y **Cardboard** debido a similitudes visuales.
+
+---
+
+# 🔍 3. Aprendizaje No Supervisado (Clustering)
+
+Con el objetivo de validar la estructura natural del dataset se implementaron distintos algoritmos de clustering.
+
+## K-Means
+
+- Aplicación del Método del Codo (Elbow Method)
+- Determinación del número óptimo de clusters
+
+## DBSCAN
+
+- Identificación de datos atípicos (*noise*)
+- Detección de agrupaciones densas
+
+##  Clustering Jerárquico
+
+- Construcción de dendrogramas
+- Análisis de relaciones jerárquicas entre materiales
+
+---
+
+#  Modelos Implementados
+
+Durante el desarrollo del proyecto se evaluaron diferentes algoritmos de clasificación y análisis:
+
+- ResNet50
+- SVM
+- Random Forest
+- Decision Tree
+- Gaussian Naive Bayes
+- MLP (Multi-Layer Perceptron)
+- PCA
+- t-SNE
+- SelectKBest
+- K-Means
+- DBSCAN
+- GridSearchCV
+
+---
+
+#  Resultados
+
+El sistema logró un desempeño sólido en la clasificación de residuos reciclables.
+
+##  Rendimiento
+
+- F1-Score superior a **0.90** en la mayoría de las categorías.
+- Alta capacidad de generalización en entornos controlados.
+- Reducción significativa de errores de clasificación.
+
+---
+
+# Trabajo Futuro
+
+Como mejora futura del proyecto se propone:
+
+- Implementar modelos de detección de objetos en tiempo real.
+- Integrar arquitecturas como **YOLO**.
+- Clasificar múltiples residuos simultáneamente mediante video en vivo.
+
+---
+
+# 📂 Estructura del Proyecto
+
+```bash
+📁 Proyecto-IA-Residuos
+│
+├── 📁 dataset
+├── 📁 notebooks
+├── 📁 modelos
+├── 📁 resultados
+├── 📁 imagenes
+├── 📄 README.md
+├── 📄 requirements.txt
+└── 📄 LICENSE
