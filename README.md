@@ -1,6 +1,6 @@
 <img width="2048" height="768" alt="banner" src="https://github.com/user-attachments/assets/7aab1576-3d68-40d4-b265-300982cba92d" />
 
-###♻️ Modelo de Visión Artificial para la Clasificación de Residuos
+###Modelo de Visión Artificial para la Clasificación de Residuos
 
 
 ---
