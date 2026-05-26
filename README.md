@@ -1,5 +1,6 @@
-<img width="2048" height="768" alt="ChatGPT Image 25 may 2026, 03_29_28 p m" src="https://github.com/user-attachments/assets/07d32f1b-5098-4597-acc8-4e98968f6f48" />
-# ♻️ Modelo de Visión Artificial para la Clasificación de Residuos
+<img width="2048" height="768" alt="banner" src="https://github.com/user-attachments/assets/7aab1576-3d68-40d4-b265-300982cba92d" />
+
+###♻️ Modelo de Visión Artificial para la Clasificación de Residuos
 
 
 ---
